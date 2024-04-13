@@ -284,7 +284,7 @@ header .contact-button {
         overflow-x: hidden;
     }
     .hero-shape {
-        display: none;
+        display: none; 
     }
     .hero-text-contain {
         width: 150rem;
