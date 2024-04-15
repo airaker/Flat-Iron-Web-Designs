@@ -10,7 +10,11 @@
 body {
     background-color:white;
     overflow-x: hidden;
+
     
+}
+html {
+  scroll-behavior: smooth;
 }
 :root{
     --mobile-topper-font-size: 2.5rem;
@@ -25,6 +29,7 @@ body {
 .section {
     height: fit-content;
     padding-bottom: 20rem;
+
 }
 @media (min-width: 1024px){
     .section {
@@ -49,6 +54,12 @@ body {
 button {
     cursor: pointer;
 }
+
+.blurred {
+  filter: blur(10px)
+}
+
+
 /*                  NAV BAR                  */
 
 /* Mobile Screen */
@@ -64,7 +75,8 @@ button {
         z-index: 9;
         display: fixed;
         box-shadow: 0px 4px 16.600000381469727px 0px #C0C0C040;
-
+        overflow: hidden;
+        position: fixed;
     }
     
     .header img {
@@ -81,15 +93,28 @@ button {
         list-style: none;
         position: fixed;
         right: 0;
-        background-color: #34D6C9;
+        top: 12vh;
+        background-color: #ffffff;
         height: 100vh;
-        z-index: -1;
         align-items: center;
         justify-content: center;
-        width: 70%;
+        width: 60%;
         gap: 3rem;
-        backdrop-filter: blur(10px);
         display: none;
+        z-index: 29;
+        transition: all 3s;
+        filter: blur(0)
+    }
+    /* .blurred {
+      position: fixed;
+      right: 100%;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      background-color: rgb(0, 0, 0);
+    } */
+    .active-flex {
+      display: flex;
     }
     .nav-container ul a {
         color: #667085;
@@ -101,11 +126,14 @@ button {
     height: 80px;
     z-index: 99;
     padding-right: 7.5rem;
-
+    
    }
    .logo {
     padding-left: 5rem;
 }
+  .logo img {
+    height: 15vh;
+  }
 }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 1024px) {
@@ -192,31 +220,13 @@ header .contact-button {
         padding-bottom: 20rem;
         padding-top: 3rem;
         background-color: #EBFBFA;
+        opacity: 1;
     }
+    
     .hero > * {
         z-index: 2;    
     }
-    .hero-shape {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 200%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-        z-index: 1;
-    }
     
-    .hero-shape svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 0px);
-        height: 550px;
-    }
-    
-    .hero-shape .shape-fill {
-        fill: #e7eeee;
-    }
     .hero .hero-text-contain {
         display: flex;
         flex-direction: column;

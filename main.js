@@ -27,3 +27,23 @@ function addAnimation() {
     })
   })
 }
+
+let mobilebutton = document.querySelector('.mobile-nav-button')
+let mobilenav = document.querySelector('.nav-container-list')
+let sections = document.querySelectorAll('.section')
+let displayed
+
+ function displayNav() {
+  console.log('sent')
+    if (mobilenav.style.display === "flex") {
+      mobilenav.style.display = "none"
+      sections.forEach(i => {
+        i.classList.add = 'blurred'
+        console.log(i)
+      });
+
+    } else {
+      mobilenav.style.display = "flex"
+
+    }
+ }

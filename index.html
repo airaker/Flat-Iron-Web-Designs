@@ -20,33 +20,31 @@
             <img src="assets/imgs/Screenshot 2024-03-29 154646.png" alt="logo">
         </div>
         <nav class="nav-container">
-            <ul class="active">
+            <ul class="nav-container-list">
+              <div class="blurred"></div>
                 <li class="active">
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">About Us</a>
+                    <a href="#aboutus">About Us</a>
                 </li>
                 <li>
-                    <a href="#">Work</a>
+                    <a href="#services">Services</a>
                 </li>
                 <li>
-                    <a href="#">Capabilities</a>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                    <a href="#">Agency</a>
-                </li>
-                <li>
-                    <a href="#">Insights</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
         <button class="contact-button">Contact Us</button>
-        <button class="mobile-nav-button">
+        <button class="mobile-nav-button" onclick="displayNav()">
             <img src="assets/svgs/burger-menu-svgrepo-com.svg" alt="Hamburger">
         </button>
     </header>
-    <div class="hero">
+    <div class="hero section" id="home">
         <div class="hero-text-contain">
           <h1>Empower Your Brand's 
             Journey with <span>Flat Iron Web Designs</span>
@@ -74,13 +72,9 @@
           <img src="assets/imgs/image11.jpg" alt="">
           </div>
         </div>
-        <div class="hero-shape">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-          </svg>
-      </div>
+        
     </div>
-    <div class="section1 section">
+    <div class="section1 section" id="aboutus">
         <img src="assets/imgs/image1.jpg" alt="friends laughing">
         <div class="section1-container ">
            
@@ -93,7 +87,7 @@
 
         </div>
     </div>
-    <div class="section2 section">
+    <div class="section2 section" id="services">
         <div class="section2-container">
             <h2>Services</h2>
             <h1>What We Offer</h1>
@@ -116,7 +110,7 @@
             </div>
         </div>
     </div>
-    <div class="section3 section">
+    <div class="section3 section"id="portfolio">
         <div class="section3-container"> 
             <h2>Portfolio</h2>
             <h1>See Our Latest Projects</h1>
@@ -140,7 +134,7 @@
               
         </div>     
     </div>
-    <div class="section4 section">
+    <div class="section4 section" >
         <div class="scroller">
             <ul class="tag-list scroller__inner">
                 <img src="assets/imgs/image3.png" alt="">
@@ -215,7 +209,7 @@
       </section>
       </main>
       
-      <footer class="footer">
+      <footer class="footer section">
         <div class="footer-container">
             <div class="footer-optional">
               <div>
