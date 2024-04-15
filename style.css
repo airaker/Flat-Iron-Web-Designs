@@ -16,7 +16,7 @@ body {
     --mobile-topper-font-size: 2.5rem;
     --mobile-header-font-size: 6rem;
     --mobile-p-font-size: 2.4rem;
-    --hero-image-height: 20rem;
+    --hero-image-height: 22rem;
     --desktop-topper-font-size: 1.5rem;
     --desktop-header-font-size: 2.25rem;
     --desktop-p-font-size: 1.1rem;
@@ -41,7 +41,11 @@ body {
     border-radius: .5rem;
     cursor: pointer;
 }
-
+@media (min-width: 1024px){
+  .contact-button:hover {
+    background-color: black;
+  }
+}
 button {
     cursor: pointer;
 }
@@ -140,8 +144,8 @@ header {
 }
 .nav-container ul li a::before {
     content: '';
-    background-color: #667085;
-    height: 5%;
+    background-color: #34D6C9;
+    height: 7%;
     position: absolute;
     left: 0%;
     bottom: -10%;
@@ -150,6 +154,9 @@ header {
     transform-origin: center;
     transform: scaleX(0);
     
+}
+.nav-container ul li a:hover {
+  color: #34D6C9;
 }
 .nav-container ul li a:hover::before {
     animation: fadeup .3s linear forwards;
@@ -287,17 +294,20 @@ header .contact-button {
         display: none; 
     }
     .hero-text-contain {
-        width: 150rem;
-        padding-top: 5rem;
+        position: absolute;
+        width: 40rem;
+        padding-top: 8rem;
+        padding-left: 5rem;
+        z-index: 3;
     }
     .hero-text-contain p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .hero-text-contain h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .hero-text-contain h1 span {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .hero hr {
         display: none;
@@ -316,7 +326,7 @@ header .contact-button {
     }
     .hero-images-container div {
         rotate: 20deg;
-        transform: translate(-2rem, -10rem);
+        transform: translate(49rem, -35rem);
         width: calc(0.728476821 * 25rem);
     }
     .hero-images-container-2 {
@@ -329,11 +339,12 @@ header .contact-button {
         width: calc(0.728476821 * var(--hero-image-height));
         object-fit: cover;
         border-radius: 2rem;
+        z-index: 2;
 
     }
     .hero-images-container-2 div {
         rotate: 20deg;
-        transform: translate(-5rem, -10rem);
+        transform: translate(20rem, -10rem);
         width: calc(0.728476821 * 25rem);
     }
     .hero-buttons{
@@ -902,6 +913,7 @@ header .contact-button {
         padding-block: 2rem;
         border-radius: 5px;
         font-size: 3rem;
+        cursor: pointer;
       }
     
       .button__icon {
@@ -951,6 +963,19 @@ header .contact-button {
         font-size: var(--mobile-topper-font-size);
         color: white;
         font-weight: 400;
+      }
+      .footer-contact-follow {
+        padding-top: 1rem;
+      }
+      .footer-contact-follow div{
+        display: flex;
+
+        gap: .2rem;
+      }
+      .footer-contact-follow div a i {
+        color: #34D6C9;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.651);
+        font-size: 4rem;
       }
 }
 /* TABLET LANDSCAPE / DESKTOP */
@@ -1010,13 +1035,13 @@ header .contact-button {
       }
       
       .contact__title {
-        font-size: calc(var(--desktop-header-font-size ) / 1.2);
+        font-size: calc(var(--desktop-header-font-size ) / 2);
         font-weight: 500;
         
       }
       
       .contact__subtitle{
-        font-size: calc(var(--desktop-p-font-size));
+        font-size: calc(var(--desktop-p-font-size) / 1.4);
         color: #344054;
     }
       .contact__form{
@@ -1031,7 +1056,7 @@ header .contact-button {
       }
       
       .contact__label{
-        font-size: calc(var(--desktop-p-font-size));
+        font-size: calc(var(--desktop-p-font-size) / 1.4);
         color:var(--text-color)
       }
       
@@ -1039,7 +1064,7 @@ header .contact-button {
         width: 100%;
         background-color: var(--input-color);
         color: gray;
-        font-size: calc(var(--desktop-p-font-size) / 1.1);
+        font-size: calc(var(--desktop-p-font-size) / 1.4);
         border: none;
         outline: none;
         padding: .25rem .5rem .5rem 0;
@@ -1070,31 +1095,61 @@ header .contact-button {
         display: flex;
         gap: 10rem;
         justify-content: center;
-
       }
       .footer-container div img {
         height: 100px;
+      }
+      .footer-optional div {
+        height: fit-content;
+        width: max-content;
+        position: relative;
+      }
+      .footer-optional div img {
+        height: 10rem;
+        padding-bottom: 1rem;
       }
       .footer-optional {
         display: block;
       }
 
       .footer-optional p {
-        font-size: 1rem;
+        font-size: calc(var(--desktop-p-font-size) / 1.4);
         color: #4e5564;
+        width: 80%;
       }
       .footer-container div h1 {
         font-size: var(--desktop-topper-font-size);
         color: #344054;
+        width: max-content;
       }
       .footer-container div {
-        width: 30%;
+        width: 24%;
       }
       .footer-container li {
         list-style: none;
         color: #667085;
-        font-size: 1rem;
-        padding-top: 1.5rem;
+        font-size: calc(var(--desktop-p-font-size) / 1.4);
+        padding-top: 1rem;
+        cursor: pointer;
+      }
+      .footer-contact-follow div a i {
+        color: #0d635c;
+        font-size: 2rem;
+        animation: flutter 1s linear forwards;
+
+      }
+      .footer-contact-follow div a:hover {
+        animation: raise .5s linear forwards;
+
+      }
+      @keyframes flutter {
+        from {}
+        to {transform: rotateY(360deg);}
+      }
+
+      @keyframes raise {
+        from {}
+        to {transform: translateY(-10px);}
       }
       .footer2 {
         background-color: #34D6C9;
@@ -1109,7 +1164,11 @@ header .contact-button {
         color: white;
         font-weight: 400;
       }
+      .footer-contact-follow {
+        padding-top: 1rem;
+      }
       .footer-contact-follow div{
         display: flex;
+        gap: .2rem;
       }
 }
