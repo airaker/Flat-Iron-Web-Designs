@@ -321,9 +321,9 @@ header .contact-button {
     }
     .hero hr {
         display: none;
-    }
+      }
     .hero-images-container {
-        width: 50%;
+        width: 65%;
         height: 1000px;
         display: block;
     }
