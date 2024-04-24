@@ -321,7 +321,9 @@ header .contact-button {
     }
     .hero hr {
         display: none;
+        background-color: #34d6c9;
       }
+    
     .hero-images-container {
         width: 65%;
         height: 1000px;
